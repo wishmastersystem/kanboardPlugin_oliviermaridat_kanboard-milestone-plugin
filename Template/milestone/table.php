@@ -102,12 +102,12 @@
 
                             <?php if (!empty($link['date_due'])): ?>
                                 <span title="<?= t('Due date') ?>" class="task-date
-              <?php if (time() > $link['date_due']): ?>
-                            task-date-overdue
-              <?php elseif (date('Y-m-d') == date('Y-m-d', $link['date_due'])): ?>
-                task-date-today
-              <?php endif ?>
-            ">
+                    <?php if (time() > $link['date_due']): ?>
+                                 task-date-overdue
+                    <?php elseif (date('Y-m-d') == date('Y-m-d', $link['date_due'])): ?>
+                         task-date-today
+                    <?php endif ?>
+                    ">
                                     <i class="fa fa-calendar"></i>
                                     <?= $this->dt->datetime($link['date_due']) ?>
                                 </span>
